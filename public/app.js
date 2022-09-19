@@ -4,12 +4,12 @@ function firstBtn() {
     var numberBoxValue = document.getElementById('numberbox').value;
     const primeNrArray = new Array(2, 3, 5, 7 ,11);
 
-    //Eftersom arrayen börjar på 0
-    //numberBoxValue -= 1;
+    const outputSequence = document.getElementById('outputSeq');
+    outputSequence.innerHTML = '';
 
     for (var i = 0; i < numberBoxValue; i++) {
-        console.log(primeNrArray[i]);
-    }
+        outputSequence.innerHTML += (primeNrArray[i]) + ', ';
+    };
     
 }
 
@@ -20,7 +20,7 @@ function secondBtn() {
     //Eftersom arrayen börjar på 0
     numberBoxValue -= 1;
 
-    const outputSequence = document.getElementById('outputSeq')
+    const outputPosition = document.getElementById('outputPos');
 
-    outputSequence.innerHTML = (primeNrArray[numberBoxValue]);
+    outputPosition.innerHTML = (primeNrArray[numberBoxValue]);
 }
