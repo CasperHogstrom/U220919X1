@@ -30,20 +30,43 @@ function fiboBtn() {
     const outputFibo = document.getElementById('outputFibo');
     outputFibo.innerHTML = '';
 
-    fibo = (0,1);
+    var fibo = [1,1];
 
     if (numberBoxValue == 1) {
-        fibo[1];
+        fibo = [1];
     };
 
     if (numberBoxValue == 2) {
         fibo[1,1];
     };
 
-    for (var i = 2; i <= numberBoxValue; i++) {
+    for (var i = 2; i < numberBoxValue; i++) {
+        fibo[+i] = fibo[i-1] + fibo[i-2];
+    };
+    outputFibo.innerHTML = fibo;
+
+}
+
+function fiboBtnPos() {
+    var numberBoxValue = document.getElementById('numberbox').value;
+    const outputFibo = document.getElementById('outputFiboPos');
+    outputFibo.innerHTML = '';
+
+    var fibo = [1,1];
+
+    if (numberBoxValue == 1) {
+        fibo = [1];
+    };
+
+    if (numberBoxValue == 2) {
+        fibo[1,1];
+    };
+
+    for (var i = 2; i < numberBoxValue; i++) {
         fibo[+i] = fibo[i-1] + fibo[i-2];
     };
     
-    outputFibo.innerHTML += (fibo)
+    numberBoxValue -= 1;
 
+    outputFibo.innerHTML = fibo[numberBoxValue];
 }
