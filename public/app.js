@@ -65,7 +65,7 @@ function fiboBtnPos() {
     for (var i = 2; i < numberBoxValue; i++) {
         fibo[+i] = fibo[i-1] + fibo[i-2];
     };
-    
+    //För att se till att man inte får undefined
     numberBoxValue -= 1;
 
     outputFibo.innerHTML = fibo[numberBoxValue];
