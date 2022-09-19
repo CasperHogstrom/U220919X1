@@ -20,5 +20,7 @@ function secondBtn() {
     //Eftersom arrayen börjar på 0
     numberBoxValue -= 1;
 
-    console.log(primeNrArray[numberBoxValue]);
+    const outputSequence = document.getElementById('outputSeq')
+
+    outputSequence.innerHTML = (primeNrArray[numberBoxValue]);
 }
